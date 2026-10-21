@@ -1,0 +1,12 @@
+# Local editor and OS artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+# Local env or private data
+.env
+.env.*
+!*.env.example
+credentials.json
+service-account*.json
