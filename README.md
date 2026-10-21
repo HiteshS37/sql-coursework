@@ -1,69 +1,49 @@
-# SQL Coursework in Google BigQuery
+# SQL Coursework | Google BigQuery
 
-SQL coursework supplied by Hitesh Srinivas, organised for review and interview discussion. The material is a **mixture of guided in-class exercises and assignment answers**. This repository documents learning and practice—not an independent end-to-end analytics project or professional SQL deployment.
+During my Finance and Business Analytics studies, I worked on SQL exercises using Google BigQuery. I've put my classroom practice and assignment queries together here so I can keep track of what I've learned and share examples of my SQL work.
 
-## Start here
+This is a **coursework collection**, not an independent end-to-end analytics project. Some queries were guided exercises, while others were assignment answers.
 
-The five examples below are selected from the submitted work. Their SQL logic is preserved; explanatory comments were added with AI assistance. No query results or business improvements have been invented.
+## What I've practised
 
-| Example | Purpose | SQL demonstrated |
-|---|---|---|
-| [01_weather_data_cleaning.sql](showcase/01_weather_data_cleaning.sql) | Prepare weather observations for two New York airport stations. | PARSE_DATE, CONCAT, IF, CAST, missing-value handling |
-| [02_regional_education_population.sql](showcase/02_regional_education_population.sql) | Summarise the secondary-school-age population by region for 2015. | INNER JOIN, SUM, GROUP BY, filtering |
-| [03_warehouse_order_share.sql](showcase/03_warehouse_order_share.sql) | Classify warehouses by their share of recorded orders. | LEFT JOIN, scalar subqueries, CASE, COUNT, GROUP BY, HAVING |
-| [04_trip_duration_comparison.sql](showcase/04_trip_duration_comparison.sql) | Compare each bicycle trip with the average duration at its starting station. | Correlated subqueries, AVG, ROUND, ORDER BY, LIMIT |
-| [05_bike_station_usage.sql](showcase/05_bike_station_usage.sql) | Find the most frequent departure station of the bike with the greatest total recorded duration. | CTE, INNER JOIN, SUM, COUNT, GROUP BY |
+- **Querying data:** `SELECT`, `WHERE`, `DISTINCT`, `ORDER BY` and `LIMIT`
+- **Summarising data:** `COUNT`, `SUM`, `AVG`, `MIN`, `MAX` and `GROUP BY`
+- **Working across tables:** `INNER JOIN`, `LEFT JOIN` and `FULL OUTER JOIN`
+- **More complex queries:** subqueries, correlated subqueries, CTEs and `CASE`
+- **Cleaning and transforming data:** `TRIM`, `SUBSTR`, `CONCAT`, `CAST`, `PARSE_DATE`, `IF` and `COALESCE`
+- **Updating practice tables:** `UPDATE` and `DELETE`
 
-## Contents
+## A few examples from my coursework
 
-- `showcase/`: five documented examples, copied from the coursework collection.
-- `coursework/`: all 64 submitted SQL files, including one exact duplicate pair. There are 63 distinct query texts after normalising line endings and surrounding whitespace.
-- `suggested-fixes/`: two explicitly labelled AI-assisted corrections; these are separate from the submitted work.
-- [QUERY_INVENTORY.md](QUERY_INVENTORY.md): per-file concept index and review flags.
-- [REVIEW_NOTES.md](REVIEW_NOTES.md): specific corrections, assumptions and limitations.
+These five examples show some of the different ways I have used SQL in my exercises. They are taken from the original files in `coursework/`.
 
-The total number of SQL files in this prepared repository is 71: 64 coursework files, five showcase copies and two suggested fixes. These are not 71 unique exercises.
+| Exercise | What I worked on | SQL concepts |
+| --- | --- | --- |
+| [Weather data cleaning](showcase/01_weather_data_cleaning.sql) | Preparing weather readings for two New York airport stations | Dates, casting, conditional logic and missing values |
+| [Education data](showcase/02_regional_education_population.sql) | Summarising secondary-school-age population by region | Joins, filtering and aggregation |
+| [Warehouse orders](showcase/03_warehouse_order_share.sql) | Grouping warehouses by their share of recorded orders | Joins, subqueries and `CASE` |
+| [Bike trip duration](showcase/04_trip_duration_comparison.sql) | Comparing individual trip durations with station averages | Correlated subqueries and `AVG` |
+| [Bike station usage](showcase/05_bike_station_usage.sql) | Looking at which station a frequently used bike departed from most often | CTEs, joins and aggregation |
 
-## Skills evidenced by the submitted code
+## Repository structure
 
-Filtering and sorting; DISTINCT and aggregates; INNER, LEFT and FULL OUTER JOIN; scalar, nested and correlated subqueries; CASE and IF; CTEs; string cleaning and concatenation; date parsing and extraction; casting; NULL handling; and UPDATE/DELETE exercises.
+- **[`coursework/`](coursework/)** — 64 SQL files from my classes and assignments, kept with their original filenames. Some exercises overlap.
+- **[`showcase/`](showcase/)** — five examples from that collection, with a little more context around what each query does.
+- **[Query inventory](QUERY_INVENTORY.md)** — a quick index of the concepts covered in each file.
 
-No window-function implementation was found. The collection is evidence of practice with these concepts, not a certification of mastery or proof of production experience.
+## Datasets and running the queries
 
-## Data and reproducibility
+My exercises use a mix of BigQuery public datasets and tables set up for coursework. The public-data topics include bike sharing, weather, education, sales and other sample datasets.
 
-Public dataset references are retained, including London bicycles, New York Citi Bike, Austin bikeshare, NOAA weather, World Bank education, NCAA basketball, FDA food events, subway ridership, natality and solar potential. Query code contains the exact table paths used in the coursework; their current availability and schemas have not been checked against BigQuery.
+For queries that refer to coursework tables, I've used `YOUR_PROJECT_ID` instead of my Google Cloud project ID. Those queries need the relevant dataset and table to be available in your own BigQuery environment.
 
-Both personal Google Cloud project identifiers were replaced with `YOUR_PROJECT_ID` in the publication copies. Dataset and table names were retained. This placeholder is a literal identifier to replace, not a SQL parameter. Source data, table schemas, saved query results and assignment instructions were not supplied. Private-table examples therefore need the original datasets or compatible permitted copies to run.
+A few things to keep in mind:
+- These files reflect my coursework at the time, so some queries may need a syntax fix or an updated table reference before they run.
+- I haven't included the private coursework datasets or saved query results.
+- Some exercises contain `UPDATE` and `DELETE` statements; I would only run those on test tables where changes are intended.
 
-Apart from replacing project identifiers and normalising line endings, the files in `coursework/` retain their submitted contents and filenames. Some filenames contain spaces. The original uploaded ZIP has not been modified.
+## What I'm working towards
 
-## How to validate an example
+I want to go beyond individual SQL exercises and use SQL as part of a complete analytics workflow, from preparing data and exploring trends to building a dashboard and explaining the results. This repository is one part of that learning journey.
 
-1. Open a selected `.sql` file in Google BigQuery using GoogleSQL.
-2. For `YOUR_PROJECT_ID` references, use your own project and confirm the referenced tables exist and have compatible schemas.
-3. Use BigQuery query validation or a dry run to check syntax, access and estimated bytes. A dry run does not establish that the business interpretation is correct.
-4. Run SELECT examples individually and inspect the output, including duplicates, NULLs, date coverage and units.
-5. Save a small permitted result sample or screenshot alongside the query, together with the execution date and an explanation of what the result means.
-
-The collection includes UPDATE and DELETE exercises. Inspect them and use disposable coursework table copies; do not execute the entire folder as a batch. Nothing was executed against a database during this review.
-
-## Attribution and review status
-
-Hitesh supplied these files as coursework. The collection combines guided in-class exercises and assignment answers. The course provider, exact assignment titles and the classification of individual files have not yet been documented. Do not interpret this repository as a claim that the exercise prompts or datasets were created by Hitesh.
-
-Organisation, documentation and the two separately labelled corrections were prepared with AI assistance. Review performed on 21 October 2026: all 64 source files read; duplicate comparison and source-to-copy preservation checks completed. No BigQuery execution, dry run, automated SQL-parser test or result verification was performed.
-
-## Resume wording supported by this collection
-
-**SQL (Google BigQuery; coursework): joins, aggregations, subqueries, CTEs and data cleaning.**
-
-An optional coursework bullet, where space permits:
-
-> Practised SQL in Google BigQuery through coursework exercises using joins, subqueries, CTEs and data-cleaning functions across public and course datasets.
-
-## References
-
-- [GoogleSQL operators and precedence](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/operators)
-- [GoogleSQL query syntax and aliases](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax)
-- [BigQuery dry-run example](https://docs.cloud.google.com/bigquery/docs/samples/bigquery-query-dry-run)
+You can also find my other work on [my GitHub profile](https://github.com/HiteshS37).

@@ -1,10 +1,7 @@
--- Source: coursework/C5M3_sq_advanced.sql
--- Coursework query supplied by Hitesh Srinivas.
--- Documentation added with AI assistance; query logic preserved.
--- Question: Classify warehouses by their share of recorded orders.
--- Concepts: LEFT JOIN, scalar subqueries, CASE, COUNT, GROUP BY, HAVING
--- Interpretation: One row per warehouse with orders. Source tables are not included. Order counts do not independently establish successful delivery or fulfillment.
--- Validation: static review only; not executed against BigQuery in this review.
+-- From my coursework: coursework/C5M3_sq_advanced.sql
+-- I worked on grouping warehouses by the share of orders recorded for each one.
+-- The labels in this exercise describe order shares, not verified delivery outcomes.
+-- Main concepts: LEFT JOIN, subqueries, CASE, COUNT, GROUP BY and HAVING.
 
 SELECT
  Warehouse.warehouse_id,

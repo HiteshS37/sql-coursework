@@ -1,10 +1,7 @@
--- Source: coursework/C5M1_HOP2_T1.sql
--- Coursework query supplied by Hitesh Srinivas.
--- Documentation added with AI assistance; query logic preserved.
--- Question: Prepare weather observations for two New York airport stations.
--- Concepts: PARSE_DATE, CONCAT, IF, CAST, missing-value handling
--- Interpretation: One observation per source row, sorted by date and station. This query reads the 2019 table; it does not generate 2020 observations.
--- Validation: static review only; not executed against BigQuery in this review.
+-- From my coursework: coursework/C5M1_HOP2_T1.sql
+-- I used this exercise to practise parsing dates and handling missing weather values.
+-- It reads observations from two New York airport stations in the 2019 table.
+-- Main concepts: PARSE_DATE, CONCAT, IF, CAST and conditional NULL handling.
 
 SELECT
  stn,

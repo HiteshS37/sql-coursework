@@ -1,10 +1,7 @@
--- Source: coursework/C5M3_HOP_T2_join.sql
--- Coursework query supplied by Hitesh Srinivas.
--- Documentation added with AI assistance; query logic preserved.
--- Question: Summarise the secondary-school-age population by region for 2015.
--- Concepts: INNER JOIN, SUM, GROUP BY, filtering
--- Interpretation: One row per region. Confirm country_summary has one matching row per country code before treating the sums as validated.
--- Validation: static review only; not executed against BigQuery in this review.
+-- From my coursework: coursework/C5M3_HOP_T2_join.sql
+-- This exercise helped me practise joining tables and summarising data by region.
+-- It focuses on the school-age population indicator for 2015.
+-- Main concepts: INNER JOIN, SUM, GROUP BY and filtering.
 
 SELECT
 summary.region,
