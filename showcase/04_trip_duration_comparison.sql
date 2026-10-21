@@ -1,10 +1,7 @@
--- Source: coursework/C5M3_HOP3_T2_sq.sql
--- Coursework query supplied by Hitesh Srinivas.
--- Documentation added with AI assistance; query logic preserved.
--- Question: Compare each bicycle trip with the average duration at its starting station.
--- Concepts: Correlated subqueries, AVG, ROUND, ORDER BY, LIMIT
--- Interpretation: Up to 25 trips with the largest positive differences. No anomaly threshold or cause is established.
--- Validation: static review only; not executed against BigQuery in this review.
+-- From my coursework: coursework/C5M3_HOP3_T2_sq.sql
+-- In this exercise, I compared a bike trip's duration with the average at its starting station.
+-- The result shows differences from an average; it does not explain why a trip was longer.
+-- Main concepts: correlated subqueries, AVG, ROUND, ORDER BY and LIMIT.
 
 SELECT
   starttime,

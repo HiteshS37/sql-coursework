@@ -1,10 +1,7 @@
--- Source: coursework/C5M4_HOP_T6.sql
--- Coursework query supplied by Hitesh Srinivas.
--- Documentation added with AI assistance; query logic preserved.
--- Question: Find the most frequent departure station of the bike with the greatest total recorded duration.
--- Concepts: CTE, INNER JOIN, SUM, COUNT, GROUP BY
--- Interpretation: One station for one selected bike. LIMIT 1 has no secondary tie-breaker; ties can select different bikes or stations.
--- Validation: static review only; not executed against BigQuery in this review.
+-- From my coursework: coursework/C5M4_HOP_T6.sql
+-- I used a CTE to identify a heavily used bike, then counted its departure stations.
+-- If the top values tie, LIMIT 1 may choose either result.
+-- Main concepts: CTEs, INNER JOIN, SUM, COUNT and GROUP BY.
 
 WITH longest_bikes_used AS (
  SELECT  

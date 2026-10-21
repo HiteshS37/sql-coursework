@@ -1,6 +1,6 @@
-# Query Inventory
+# SQL Query Inventory
 
-64 source files. Concepts below are present in code; they are not execution or proficiency ratings. All entries require live schema/access validation before reuse. See REVIEW_NOTES.md for flagged cases.
+I use this index to find SQL topics across my 64 coursework files. The concepts are based on what appears in the queries; some files use public datasets and others need the coursework tables. I may need to check table access or make small corrections before rerunning an exercise.
 
 | File | Concepts | Dependency |
 |---|---|---|
